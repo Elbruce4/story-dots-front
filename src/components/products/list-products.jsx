@@ -1,9 +1,8 @@
 //import { useState } from 'react'
 import { useEffect , useState } from 'react'
+import Product from './product.jsx';
 
-import Card from './card.jsx';
-
-function ListProducts() {
+function DetailProducts() {
 
   const [products , setProducts] = useState([]);
 
@@ -25,7 +24,7 @@ function ListProducts() {
         products.map((obj , index) => {
           return (
             <div key={index}>
-              <Card 
+              <Product 
                 name={obj.title}  
                 price={obj.price}
                 id={obj.id}
@@ -39,4 +38,4 @@ function ListProducts() {
 
 }
 
-export default ListProducts
+export default DetailProducts

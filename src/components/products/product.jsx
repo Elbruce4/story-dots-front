@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Card = ({name  , price , id}) => {
+const Product = ({name  , price , id}) => {
     
     return (
         <Link to={`product/` + id}>
@@ -11,10 +11,10 @@ const Card = ({name  , price , id}) => {
     )
 }
 
-Card.propTypes = {
+Product.propTypes = {
     name : PropTypes.string.isRequired,
     price : PropTypes.number.isRequired,
     id : PropTypes.number.isRequired
 }
 
-export default Card;
+export default Product;
