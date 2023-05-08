@@ -1,10 +1,10 @@
-import ListProducts from "./components/products/list-products"
+import ListOfProducts from "./components/products/list-products"
 import './App.css'
 
 function App() {
 
   return (
-    <ListProducts/>
+    <ListOfProducts/>
   )
 
 }

@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+
 import { useEffect , useState } from "react";
 import { useParams } from "react-router-dom"
 
@@ -17,7 +17,7 @@ const DetailCard = (/* {name , description , price , img} */) => {
               return error;
             }
           })()
-    },[])
+    },[params.productId])
 
     return (
         <div>

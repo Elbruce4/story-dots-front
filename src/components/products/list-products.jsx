@@ -2,9 +2,11 @@
 import { useEffect , useState } from 'react'
 import Product from './product.jsx';
 
-function DetailProducts() {
+function ListOfProducts() {
 
   const [products , setProducts] = useState([]);
+  const isAdmin = localStorage.getItem("isAdmin");
+  console.log("¿Admin?" , isAdmin);
 
   useEffect(() => {
     (async () => {
@@ -38,4 +40,4 @@ function DetailProducts() {
 
 }
 
-export default DetailProducts
+export default ListOfProducts
