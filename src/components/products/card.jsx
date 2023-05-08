@@ -1,21 +1,20 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const Card = ({name , description , price}) => {
+const Card = ({name  , price , id}) => {
     
     return (
-        <div>
+        <Link to={`product/` + id}>
            <h3>{name ?? ""} </h3> 
-           <h2>{description ?? ""}</h2>
            <h2>{price ?? ""}</h2>
-        </div>
+        </Link >
     )
 }
 
 Card.propTypes = {
     name : PropTypes.string.isRequired,
-    description : PropTypes.string.isRequired,
     price : PropTypes.number.isRequired,
-
+    id : PropTypes.number.isRequired
 }
 
 export default Card;
