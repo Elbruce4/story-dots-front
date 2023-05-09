@@ -1,5 +1,6 @@
 import App from "../App";
 import SignIn from "../components/auth/signin";
+import HomeCRUD from "../components/crud/home-crud";
 import Home from "../components/home";
 import ErrorPage from "../components/not-route-finded";
 import DetailProducts from "../components/products/detail-product";
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
     {
       path: "products/:productId",
       element: <DetailProducts />,
+    },
+    {
+      path: "/crudProducts",
+      element: <HomeCRUD />,
     },
   ]);
 
