@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate  } from "react-router-dom";
+import "./signin.css"
 
 const SignIn = () => {
 
@@ -29,13 +30,22 @@ const SignIn = () => {
     }
 
     return (
-        <form onSubmit={onClick}> 
-            <input type="text" name="mail" onChange={handleChange} />
-            
-            <input type="password" name="password" onChange={handleChange} />
+        <div className="div">
+            <form onSubmit={onClick} className="form"> 
+                <label htmlFor="" className="title">Sign in to Your Account</label>
+                <label htmlFor="">Email Address</label>
+                <input type="text" name="mail" onChange={handleChange} className="input" />
+                
+                <label htmlFor="">Passowrd</label>
+                <input type="password" name="password" onChange={handleChange} className="input" />
 
-            <input type="submit" value="Ingresar" />
-        </form>
+                <input type="submit" value="Ingresar" className="button"/>
+            </form>
+            <div className="div-imgs">
+                <img src="../../assets/storyDots.png" alt="" className="img-logo" />
+                <img src="../../assets/name.png" alt=""  />
+            </div>
+        </div>
     )
 
 }

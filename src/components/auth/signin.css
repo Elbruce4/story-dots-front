@@ -1,0 +1,51 @@
+.div{
+    display: flex;
+    flex-direction: row;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    height: 400px;
+    margin-right: 200px;
+}
+
+.img-logo{
+    height: 200px;
+    width: 200px;
+    margin-left: 150px;
+}
+
+.div-imgs{
+    margin-top: 50px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    background-color: white;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px grey solid;
+}
+
+.input:focus {
+    border: 2px grey solid;
+}
+
+.button {
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: rgb(131, 0, 253);
+    color: white;
+    border: none;
+}
+
+.title{
+    font-size: 30px;
+}
