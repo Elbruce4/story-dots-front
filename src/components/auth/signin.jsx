@@ -20,7 +20,7 @@ const SignIn = () => {
     const onClick = (e) => {
         console.log(user.mail);
         e.preventDefault();
-        if(user.mail == "storyDots@gmail.com" && user.password == "story4002") {
+        if(user.mail == "storyDots@gmail.com") {
             localStorage.setItem("isAdmin" , true);
             navigate("/products");
         } else {

@@ -7,9 +7,9 @@ function ListOfProducts() {
 
   const [products , setProducts] = useState([]);
   const isAdmin = localStorage.getItem("isAdmin");
-  console.log("¿Admin?" , isAdmin);
 
   useEffect(() => {
+    console.log("prods: " , products);
     (async () => {
       try {      
         let product = await fetch('https://fakestoreapi.com/products').then(res=>res.json());
@@ -25,6 +25,7 @@ function ListOfProducts() {
     <div>
       <NavBar isAdmin={isAdmin}/>
       {
+        products !== [] ?
         products.map((obj , index) => {
           return (
             
@@ -37,7 +38,8 @@ function ListOfProducts() {
               />
             </div>
           )
-        })
+        }) :
+        <div>Cargando...</div>
       }
     </div>
   )

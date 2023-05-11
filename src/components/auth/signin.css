@@ -9,7 +9,7 @@
     justify-content: space-around;
     align-items: start;
     height: 400px;
-    margin-right: 200px;
+    margin-right: 0px;
 }
 
 .img-logo{
@@ -23,6 +23,7 @@
     width: 500px;
     display: flex;
     flex-direction: column;
+    margin-left: 100px;
 }
 
 .input{
