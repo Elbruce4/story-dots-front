@@ -42,8 +42,8 @@ const SignIn = () => {
                 <input type="submit" value="Ingresar" className="button"/>
             </form>
             <div className="div-imgs">
-                <img src="../../assets/storyDots.png" alt="" className="img-logo" />
-                <img src="../../assets/name.png" alt=""  />
+                <img src="../../public/storyDots.png" alt="" className="img-logo" />
+                <img src="../../public/name.png" alt=""  />
             </div>
         </div>
     )

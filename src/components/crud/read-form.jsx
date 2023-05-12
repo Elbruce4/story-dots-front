@@ -28,7 +28,7 @@ const ReadForm = () => {
                 `$ ${json.price.toString()}`,
                 'success'
             ))
-            .catch(err => Alert(
+            .catch(() => Alert(
                 "Product not find with that ID",
                 "Please try again later",
                 'error'
