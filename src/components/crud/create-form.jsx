@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Alert } from './alerts';
-import {changeInput} from "./changeFunc"
+import {changeInput} from "../re-used-functions/onChangeInput"
 
 const CreateForm = () => {
 
@@ -31,7 +31,7 @@ const CreateForm = () => {
 
     return(
 
-        <form className="form" onSubmit={onSubmit}>
+        <form className="form-crud" onSubmit={onSubmit}>
             <h2 >Crea tu producto</h2>
                 <label htmlFor="">Nombre</label>
                 <input type="text" name="mail" className="input" onChange={(e) => changeInput(e , inputs , setInputs)} />

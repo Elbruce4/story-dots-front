@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Alert } from "./alerts";
-import {changeInput} from "./changeFunc"
+import {changeInput} from "../re-used-functions/onChangeInput"
 
 const UpdateForm = () => {
 
@@ -32,7 +32,7 @@ const UpdateForm = () => {
 
     return(
 
-        <form className="form" onSubmit={onSubmit}>
+        <form className="form-crud" onSubmit={onSubmit}>
             <h2 >Actualiza tu producto</h2>
             
                 <label htmlFor="">Id</label>

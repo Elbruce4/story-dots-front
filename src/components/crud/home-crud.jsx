@@ -21,7 +21,7 @@ const HomeCRUD = () => {
 
     return (
         <div>
-            <h2 className="title">CRUD PAGE</h2>
+            <h2 className="title">Admin page - Control products</h2>
             {
                 isAdmin == "true" ?
                 <div className="div-crud">

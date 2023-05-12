@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Alert } from './alerts';
-import { changeInput } from "./changeFunc"
+import { changeInput } from "../re-used-functions/onChangeInput"
 
 const DeleteForm = () => {
 
@@ -8,7 +8,7 @@ const DeleteForm = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        if( id == "") {
+        if( id.id == "") {
             return Alert(
                 "All inputs must be complete",
                 "before you can read a new product",
@@ -34,7 +34,7 @@ const DeleteForm = () => {
 
     return(
 
-        <form className="form" onSubmit={onSubmit}>
+        <form className="form-crud" onSubmit={onSubmit}>
             <h2 >Selecciona el producto que deseeas eliminar</h2>
             
                 <label htmlFor="">Id</label>

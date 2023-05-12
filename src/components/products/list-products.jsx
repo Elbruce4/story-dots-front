@@ -11,7 +11,6 @@ function ListOfProducts() {
   const isAdmin = localStorage.getItem("isAdmin");
 
   useEffect(() => {
-    console.log("prods: " , products);
     (async () => {
       try {      
         let product = await fetch('https://fakestoreapi.com/products').then(res=>res.json());
@@ -33,13 +32,13 @@ function ListOfProducts() {
         <div>Cargando...</div> : <div className='boxs-container'>
           {products.map((obj , index) => {
             return (
-              
                 <Product 
                   name={obj.title}  
                   price={obj.price}
                   id={obj.id}
                   admin={isAdmin}
                   img = {obj.image}
+                  desc= {obj.description}
                   key={index}
                 />
             )

@@ -1,19 +1,15 @@
 
 import { useState } from 'react'
 import { Alert } from './alerts';
+import { changeInput } from "../re-used-functions/onChangeInput"
 
 const ReadForm = () => {
 
     const [id , setId] = useState("")
 
-    const onChange = (e) => {
-        console.log(e.target.value);
-        setId(e.target.value)
-    }
-
     const onSubmit = async (e) => {
         e.preventDefault();
-        if( id == "") {
+        if( id.id == "") {
             return Alert(
                 "All inputs must be complete",
                 "before you can read a new product",
@@ -21,7 +17,7 @@ const ReadForm = () => {
             )
         } 
         console.log("id" , id.id);
-        const product = await fetch(`https://fakestoreapi.com/products/${id}`)
+        const product = await fetch(`https://fakestoreapi.com/products/${id.id}`)
             .then(res=>res.json())
             .then(json=>Alert(
                 json.title,
@@ -30,7 +26,7 @@ const ReadForm = () => {
             ))
             .catch(() => Alert(
                 "Product not find with that ID",
-                "Please try again later",
+                "Please check if your ID number is OK",
                 'error'
             ))
         console.log(product);
@@ -38,11 +34,11 @@ const ReadForm = () => {
 
     return(
 
-        <form className="form" onSubmit={onSubmit}>
+        <form className="form-crud" onSubmit={onSubmit}>
             <h2 >Ve un producto</h2>
             
                 <label htmlFor="">Id</label>
-                <input type="text" name="id" className="input" onChange={(e) => onChange(e , id , setId)}/>
+                <input type="text" name="id" className="input" onChange={(e) => changeInput(e , id , setId)}/>
 
                 <input type="submit" value="Buscar" className="button"/>
         </form>

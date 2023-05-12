@@ -4,15 +4,7 @@
     align-items: center;
 }
 
-.contains-products{
-    width: 500px;
-    border : solid black 1px;
-    border-radius: 20px;
-    margin: 5px;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-}
+
 
 .boxs-container {
     display: flex;
