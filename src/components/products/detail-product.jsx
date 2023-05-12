@@ -31,7 +31,7 @@ const DetailCard = () => {
             <h3>{dataProduct.title}</h3>
             <img src={dataProduct.image} alt=""  style={{"width" : "350px" , "height" : "350px"}}/>
             <p>{dataProduct.description}</p>
-            <h5>{dataProduct.price}</h5>
+            <h5>price: $ {dataProduct.price}</h5>
           </div>
       }
         </div>

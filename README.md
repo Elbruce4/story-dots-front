@@ -25,6 +25,9 @@ If you want to have an admin sessions please this are you credential => mail: st
 
 If you want to have an no admin sessions just log in with any credentials
 
+With admin creedentials you will have a botton call "Edit products" which you navigate to "/crudProducts and
+there you can use crud form
+
 
 
 
