@@ -2,6 +2,7 @@
 import { useEffect , useState } from 'react'
 import Product from './product.jsx';
 import NavBar from '../nav-bar/index.jsx';
+import "./styles.css";
 
 function ListOfProducts() {
 
@@ -19,27 +20,29 @@ function ListOfProducts() {
       }
     })()
 
-  },[])
+  },)
   
   return (
-    <div>
+    <div className='landing-container'>
       <NavBar isAdmin={isAdmin}/>
       {
         products !== [] ?
-        products.map((obj , index) => {
-          return (
-            
-            <div key={index}>
-              <Product 
-                name={obj.title}  
-                price={obj.price}
-                id={obj.id}
-                admin={isAdmin}
-              />
-            </div>
-          )
-        }) :
-        <div>Cargando...</div>
+        <div className='boxs-container'>
+          {products.map((obj , index) => {
+            return (
+              
+                <Product 
+                  name={obj.title}  
+                  price={obj.price}
+                  id={obj.id}
+                  admin={isAdmin}
+                  img = {obj.image}
+                  key={index}
+                />
+            )
+          }) }
+        </div>
+        : <div>Cargando...</div>
       }
     </div>
   )
