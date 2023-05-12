@@ -7,6 +7,7 @@ import "./styles.css";
 function ListOfProducts() {
 
   const [products , setProducts] = useState([]);
+  const [isLoading , setIsLoading] = useState(true);
   const isAdmin = localStorage.getItem("isAdmin");
 
   useEffect(() => {
@@ -15,19 +16,21 @@ function ListOfProducts() {
       try {      
         let product = await fetch('https://fakestoreapi.com/products').then(res=>res.json());
         setProducts(product)
+        setIsLoading(false)
       } catch (error) {
+        setIsLoading(false)
         return error;
       }
     })()
-
+    
   },)
   
   return (
     <div className='landing-container'>
       <NavBar isAdmin={isAdmin}/>
       {
-        products !== [] ?
-        <div className='boxs-container'>
+        isLoading ?
+        <div>Cargando...</div> : <div className='boxs-container'>
           {products.map((obj , index) => {
             return (
               
@@ -42,7 +45,7 @@ function ListOfProducts() {
             )
           }) }
         </div>
-        : <div>Cargando...</div>
+        
       }
     </div>
   )
